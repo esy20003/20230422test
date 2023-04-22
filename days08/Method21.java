@@ -1,0 +1,39 @@
+//package days08;
+//
+//import java.util.Scanner;
+//
+//public class Method21 {
+//
+//	public static void main(String[] args) {
+//		int [] mdays = {0,31,28,31,30,31,30,31,31,30,31,30,31};
+//		Scanner sc = new Scanner(System.in);
+//		int y = inputYear(sc);
+//		int m = inputMonth(sc);
+//		int input = 0;
+//		while(true) {
+//			if( (y%4==0)&&(y%100!=0)||(y%400==0) ) mdays[2] = 29;
+//			else mdays[2] = 28;
+//			int days = sumDaysYear( y );  // 입력한 년도의 전년도까지의 날짜 합 계산
+//			days += sumDaysMonth( m, mdays );  // 입력한 월의 전월까지의 날짜 합 계산 
+//			days+=1;  // 날짜는 1일자 기준 합산
+//			int temp = days % 7;
+//			prnCalendar(y, m, mdays);
+//			System.out.printf("\n[1.이전달][2.다음달][3.종료] : ");
+//			input = sc.nextInt();
+//			if(input==3) break;
+//			if( input == 1 ) {
+//				if( m == 1 ) {
+//					y--; m=12;					
+//				}else m--;
+//			}else if(input == 2){
+//				if( m == 12 ) {
+//					y++; m=1;				
+//				}else m++;
+//			}
+//			System.out.println("\n\n");
+//		}
+//		System.out.println("프로그램을 종료합니다");
+//
+//	}
+//
+//}
